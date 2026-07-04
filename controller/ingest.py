@@ -7,7 +7,7 @@ from services.vectorstore import vector_store, DATA_DIR
 
 router = APIRouter()
 
-@router.post("/file/")
+@router.post("/file")
 async def upload_file(file: UploadFile):
     try:
         file_path = os.path.join(DATA_DIR, file.filename)
